@@ -159,7 +159,10 @@ jupyter nbclassic
 ```
 
 ### 참고사항
-#### Proxy 설정
+#### HTTP Proxy
+ - HTTP Proxy 서버는 클라이언트와 서버 간 통신을 중계하는 서버
+   - Proxy 서버는 클라이언트의 IP를 숨기고 캐싱을 통해 네트워크 성능 향상
+   - Proxy 서버를 통해 로깅 및 엑세스 제어가 가능하므로 보안을 강화
 ```shell
 import os 
 os.environ['HTTP_PROXY'] = 'http://70.10.15.10:8080'
