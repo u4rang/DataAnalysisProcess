@@ -158,6 +158,21 @@ pip install jupyter nbclassic pandas openpyxl xlrd seaborn chardet joblib bs4 se
 jupyter nbclassic
 ```
 
+### Selenium
+- Selenium은 다양한 웹 브라우저에서 웹 기반 애플리케이션의 기능을 테스트하는 것을 목적으로 자동화하려는 목적
+  - Selenium Client는 WebDriver와 Browser Driver 로 구성
+- 웹 브라우저를 리모트로 관리
+  - time.sleep 기능 추가
+- 단점
+  - 느림
+- 사용처
+  - Naver Cafe
+
+#### Chrome Driver Download
+ - https://developer.chrome.com/docs/chromedriver/downloads?hl=ko
+ - Chrome 버전 115 이상인 경우
+   - https://googlechromelabs.github.io/chrome-for-testing/
+
 ### 참고사항
 #### HTTP Proxy
  - HTTP Proxy 서버는 클라이언트와 서버 간 통신을 중계하는 서버
@@ -169,8 +184,34 @@ os.environ['HTTP_PROXY'] = 'http://70.10.15.10:8080'
 os.environ['HTTPS_PROXY'] = 'http://70.10.15.10:8080'
 ```
 
+#### API KEY 관리 방법 - 환경 변수 사용
+##### 환경 변수 설정
+###### Windows
+```shell
+set API_KEY=....
+``` 
+###### LINUX
+```shell
+export API_KEY=....
+``` 
+###### Python 코드에서 환경 변수 읽기
+```shell
+import os
+
+api_key = os.getenv('API_KEY')
+```
+
 ### 참고자료
  - [Visual Studio Code에서 Jupyter Notebook 사용하는 방법](https://yeomss.tistory.com/227)
+
+#### Naver
+ - 1번에 한번에 최대 가져올 수 있는 ITEM 최대 4000 개
+
+#### Python에서 Global Variable 확인하는 방법
+```python
+# Global Variables
+%whos
+```
 
 ### 설치 프로그램
  - [Miniforge](https://github.com/conda-forge/miniforge)
