@@ -274,6 +274,83 @@ api_key = os.getenv('API_KEY')
 /一-龥/
 ```
 
+### Jupyter Notebook
+#### 주요 단축키
+##### `[v]`
+- 셀을 code로 변환
+##### `[m]`
+- 셀을 markdown으로 변환
+##### `[r]`
+- 셀을 raw으로 변환
+##### `[1] ~ [6]`
+- 셀을 Headings 1 ~ 6 으로 변환
+##### `[shift] + [enter]`
+- 코드 실행 후 아래 셀로 이동
+##### `[ctrl] + [enter]`
+- 코드 실행 후 현재 셀에 멈춤
+##### `[alt] + [enter]`
+- 코드 실행 후 아래에 셀 추가
+##### `[↑], [↓]`
+- 현재 셀을 위, 아래로 이동
+##### `[shift] + [↑], [↓]`
+- 현재 셀부터 위, 아래로 확장
+##### `[a], [b]`
+- 현재 셀 위, 아래로 셀 추가
+##### `[x]`
+- 선택한 셀 잘라내기
+##### `[c]`
+- 선택한 셀 복사하기
+##### `[v]`
+- 선택한 셀 붙여놓기
+##### `[d] + [d]`
+- 선택한 셀 삭제
+##### `[z]`
+- 삭제한 셀 되돌리기(undo)
+##### `[f]`
+- 패턴 찾기 및 바꾸기
+##### `[l]`
+- 셀마다 행 숫자 보이기/감추기
+##### `[h]`
+- 단축키 목록 보이기
+
+#### 매직 명령어
+##### `%magic`
+- 매직 명령어 관련 정보 출력
+##### `%pwd`
+- 현재 작업 경로 출력
+##### `%cd '경로명'`
+- 작업 경로 변경
+##### `%ls`
+- 현재 작업 경로명의 파일명 출력
+##### `%whos`
+- 전역 변수 목록을 표로 출력
+##### `%reset`
+- 전역 변수 일괄 삭제
+##### `%pdef 함수`
+- 함수의 호출 시그치처 출력
+##### `%pinfo 객체`
+- 객체의 상세 정보 출력
+##### `%pip <Library>`
+- 셀에서 Library 설치
+##### `%precision n`
+- 실수를 소수점 n째 자리까지 출력
+##### `%precision %i`
+- 실수에서 정수 부분만 출력
+##### `%precision %e`
+- 실수를 과학적 표기법으로 출력
+##### `%precision %r`
+- 실수 출력 자릿수 기본값으로 복원
+##### `%time`
+- 한 줄 코드 실행 소요 시간 출력
+##### `%timeit`
+- 반복 실행 후 평균 소요 시간 출력
+##### `%%time`
+- 여러 줄 코드 실행 소요 시간 출력
+##### `%matplotlib`
+- 대화형 동작하는 matplotlib 설정
+##### `%%html`
+- HTML 코드를 콘솔에 렌더링
+
 ### 참고자료
  - [Visual Studio Code에서 Jupyter Notebook 사용하는 방법](https://yeomss.tistory.com/227)
  - [Pandas API Reference](https://pandas.pydata.org/pandas-docs/stable/reference/)
@@ -281,7 +358,6 @@ api_key = os.getenv('API_KEY')
 ### 설치파일
 - [SDS_Data_Prep.zip](https://github.com/user-attachments/files/16516746/SDS_Data_Prep.zip)
 - [chromedriver-win64.zip](https://github.com/user-attachments/files/16516749/chromedriver-win64.zip)
-
 
 ### 설치 프로그램
  - [Miniforge](https://github.com/conda-forge/miniforge)
@@ -291,3 +367,8 @@ api_key = os.getenv('API_KEY')
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+### Library 설치 에러
+```shell
+pip install <Library> --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --proxy http://<ip>:<port>
+```
