@@ -1,4 +1,10 @@
 # [교육] 데이터 수집 및 처리
+### 가상환경과 Visual Studio Code 실행하기
+```shell
+cmd.exe /K C:\\ProgramData\\miniforge3\\Scripts\\activate.bat C:\\ProgramData\\miniforge3
+conda activate DataAnalysisProcess
+code C:\git\DataAnalysisProcess
+```
 
 ### CSS Selector 표기법
 #### `태그`
@@ -236,21 +242,46 @@ import os
 api_key = os.getenv('API_KEY')
 ```
 
-### 참고자료
- - [Visual Studio Code에서 Jupyter Notebook 사용하는 방법](https://yeomss.tistory.com/227)
-
-### 설치파일
-- [SDS_Data_Prep.zip](https://github.com/user-attachments/files/16516746/SDS_Data_Prep.zip)
-- [chromedriver-win64.zip](https://github.com/user-attachments/files/16516749/chromedriver-win64.zip)
-
-#### Naver
- - 1번에 한번에 최대 가져올 수 있는 ITEM 최대 4000 개
-
 #### Python에서 Global Variable 확인하는 방법
 ```python
 # Global Variables
 %whos
 ```
+
+#### 정규 표현식
+##### 한국어
+```shell
+/가-힇ㄱ-ㅎㅏ-ㅣ/
+```
+
+##### 영어
+```shell
+/a-zA-Z/
+```
+
+##### 숫자
+```shell
+/0-9/
+```
+
+##### 일본어
+```shell
+/[ぁ-ゔ]+|[ァ-ヴー]+[々〆〤]/
+```
+
+##### 한자
+```shell
+/一-龥/
+```
+
+### 참고자료
+ - [Visual Studio Code에서 Jupyter Notebook 사용하는 방법](https://yeomss.tistory.com/227)
+ - [Pandas API Reference](https://pandas.pydata.org/pandas-docs/stable/reference/)
+
+### 설치파일
+- [SDS_Data_Prep.zip](https://github.com/user-attachments/files/16516746/SDS_Data_Prep.zip)
+- [chromedriver-win64.zip](https://github.com/user-attachments/files/16516749/chromedriver-win64.zip)
+
 
 ### 설치 프로그램
  - [Miniforge](https://github.com/conda-forge/miniforge)
