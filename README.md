@@ -92,30 +92,65 @@ soup.select(selector = 'p')[0].extract()
 ```
 
 ### Python의 자료구조
-#### 리스트
-- 인덱스 있음
+#### 단순 자료형 (Primitive Data Types)
+##### 정수형 (int)
 ```python
-[ , , , , ]
+1, -5, 0
 ```
 
-#### 튜플
-- 인덱스 있음
+##### 부동 소수점형 (float)
 ```python
-( , , , , )
+3.14, -0.001, 2.0
 ```
 
-#### 집합
+##### 문자열형 (str)
+```python
+"Hello", 'Python'
+```
+
+##### 불린형 (bool)
+```python
+True, False
+```
+
+#### 복합 자료형 (Composite Data Types)
+##### 리스트
+- 리스트형은 순서가 있는 값들의 집합으로, 각 값은 인덱스를 통해 접근
+- 인덱스 있음
+- 배열 연산 불가
+```python
+[1, 2, 3], ['apple', 'banana', 'cherry']
+```
+
+##### 튜플
+- 튜플형은 리스트와 유사하지만, 값을 변경할 수 없는(immutable) 특징
+- 인덱스 있음
+```python
+(1, 2, 3), ('apple', 'banana', 'cherry')
+```
+
+##### 집합
+- 집합형은 순서가 없고, 중복 값을 허용하지 않는 값들의 집합
 - 인덱스 없음
 ```python
-{ , , , , }
+{1, 2, 3}, {'apple', 'banana', 'cherry'}
 ```
 
-#### 딕셔너리
+##### 딕셔너리
+- 사전형은 키-값 쌍의 집합으로, 키를 통해 값을 접근
 - 인덱스 없음
 - 키 존재
 ```python
-{'key' : 'value' , 'key' : 'value', 'key' : 'value', 'key' : 'value', 'key' : 'value'}
+{'name': 'Alice', 'age': 25}, {'fruit': 'apple', 'color': 'red'}
 ```
+
+### 데이터 분석을 위한 필수 라이브러리
+#### `os`
+#### `numpy`
+- 자료형을 통일 시켜버리는 특징
+#### `pandas`
+- Pandas 에서는 자료형 통일 안함
+  - 열별 자료형이 다를 수 있음
 
 ### 환경 구성 하기
 #### 환경 목록 조회
@@ -204,6 +239,10 @@ api_key = os.getenv('API_KEY')
 ### 참고자료
  - [Visual Studio Code에서 Jupyter Notebook 사용하는 방법](https://yeomss.tistory.com/227)
 
+### 설치파일
+- [SDS_Data_Prep.zip](https://github.com/user-attachments/files/16516746/SDS_Data_Prep.zip)
+- [chromedriver-win64.zip](https://github.com/user-attachments/files/16516749/chromedriver-win64.zip)
+
 #### Naver
  - 1번에 한번에 최대 가져올 수 있는 ITEM 최대 4000 개
 
@@ -220,4 +259,4 @@ api_key = os.getenv('API_KEY')
 ### Visual Studio Code Extension
 - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-- [Python]https://marketplace.visualstudio.com/items?itemName=ms-python.python
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
